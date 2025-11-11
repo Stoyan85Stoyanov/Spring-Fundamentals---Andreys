@@ -39,7 +39,6 @@
         <div th:each="item: ${allItems}"  class="bg-blur container w-50">
             <div class="row mb-4 d-flex flex-column text-center">
                 <a href="/products/details/Buzzer">
-<!--                    <img library="img" src="/img/FEMALE-JACKET.jpg" class="img-thumbnail" width="200" height="200"/>-->
                     <img library="img" th:src="'/img/' + ${item.gender} + '-' + ${item.category.name} + '.jpg'" class="img-thumbnail" width="200" height="200"/>
                 </a>
                  <h5 class="text-center"><span th:text="${item.getName()}">Item name</span></h5>
