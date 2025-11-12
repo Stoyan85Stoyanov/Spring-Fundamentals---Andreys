@@ -6,7 +6,6 @@ import bg.softuni.andreys.entity.Category;
 import bg.softuni.andreys.entity.Item;
 import bg.softuni.andreys.entity.User;
 import bg.softuni.andreys.entity.enums.CategoryEnum;
-import bg.softuni.andreys.entity.enums.Gender;
 import bg.softuni.andreys.repository.CategoryRepository;
 import bg.softuni.andreys.repository.ItemRepository;
 import bg.softuni.andreys.repository.UserRepository;
@@ -20,14 +19,12 @@ import java.util.Optional;
 @Service
 public class ItemService {
 
-    private final UserService userService;
     private final UserSession userSession;
     private final UserRepository userRepository;
     private final ItemRepository itemRepository;
     private final CategoryRepository categoryRepository;
 
-    public ItemService(UserService userService, UserSession userSession, UserRepository userRepository, ItemRepository itemRepository, CategoryRepository categoryRepository) {
-        this.userService = userService;
+    public ItemService(UserSession userSession, UserRepository userRepository, ItemRepository itemRepository, CategoryRepository categoryRepository) {
         this.userSession = userSession;
         this.userRepository = userRepository;
         this.itemRepository = itemRepository;
